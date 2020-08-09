@@ -6,7 +6,7 @@ const Card = () => {
             <h3>Card name</h3>
             <p>Paragraph input</p>
             <div>
-                content form
+                Lorem ipsum dolor sit amet.
             </div>
         </div>
     )
