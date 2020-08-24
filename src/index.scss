@@ -1,19 +1,21 @@
-@import "src/Component/Content/Cards/Card";
+//@import "src/Component/Content";
 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
   line-height: 1;
 }
+
 * {
   line-height: 1;
 }
@@ -21,5 +23,41 @@ ul {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
+}
+
+.container-app {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1040px;
+  width: 100%;
+}
+header {
+    display: flex;
+
+}
+.container__sidebar-content{
+  display: flex;
+  margin-top: 40px;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid #5574cc;
+  //align-items: stretch;
+  padding-right: 20px;
+  min-height: 80vh;
+  align-content: space-between;
+  .nav__avatar{
+    img{
+      max-width: 150px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.content-wrapper {
+  display: flex;
+  margin-left: 40px;
 }
