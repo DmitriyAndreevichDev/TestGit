@@ -15,26 +15,14 @@ const Buyers = (props) => {
     const [currentPage, setCurrentPage] = useState(1);
 
     // search
-    const  [searchString, setSearchString] = useState(``)
 
-    const searchHandler = (search) => {
-        setSearchString(search);
-        let sortFilterNewPage = newPage.filter(item => {
-          return item[`name`].toLowerCase().includes(searchString.toLowerCase())
+    const searchHandler = search => {
+        const sortFilterNewPage = newPage.filter(item => {
+          return item[`name`].toLowerCase().includes(search.toLowerCase())
         });
+
         setNewPage(sortFilterNewPage)
     };
-
-    const enterUserUpload = (pageSize) => {
-        const pageArr = [];
-        for (let i = 1; i <= Math.ceil(props.buyers.length / pageSize); i++) {
-            pageArr.push(i)
-        }
-        setPageNumbers(pageArr);
-        setPageSize(pageSize);
-        console.log(pageNumbers)
-    };
-
     const handleClick = pageNumber => {
         const indexOfLastTodo = pageNumber * pageSize;
         const indexOfFirstTodo = indexOfLastTodo - pageSize;
@@ -43,6 +31,18 @@ const Buyers = (props) => {
         setCurrentPage(pageNumber);
         console.log(currentPage);
     };
+    const enterUserUpload = (pageSize) => {
+        const pageArr = [];
+        for (let i = 1; i <= Math.ceil(props.buyers.length / pageSize); i++) {
+            pageArr.push(i)
+        }
+        setPageNumbers(pageArr);
+        setPageSize(pageSize);
+
+        console.log(pageNumbers)
+    };
+
+
 
 
     const onSorting = sortField => {
@@ -89,24 +89,26 @@ const Buyers = (props) => {
                 </table>
             </section>
 
-
-            <ul>
-                <button onClick={enterUserUpload.bind(null, 15)}>Загрузить 15 элементов</button>
-                <button onClick={enterUserUpload.bind(null, 10)}>Загрузить 10 элементов</button>
-                <button onClick={enterUserUpload.bind(null, 5)}>Загрузить 5 элементов</button>
-            </ul>
-
-            <ul className="paginator">
+            <ul className="pagination pagination-lg">
                 {
                     pageNumbers.map(el =>
                         <li key={el}>
-                            <button onClick={()=>{
+                            <button className={`page-link`} onClick={()=>{
                                 handleClick(el)
                             }}>{el}</button>
                         </li>)
                 }
-
             </ul>
+
+            <ul className={`btn-group`}>
+                <button className={`btn btn-secondary`} onClick={enterUserUpload.bind(null, 15)}>Загрузить 15 элементов</button>
+                <button className={`btn btn-secondary`} onClick={enterUserUpload.bind(null, 10)}>Загрузить 10 элементов</button>
+                <button className={`btn btn-secondary`} onClick={enterUserUpload.bind(null, 5)}>Загрузить 5 элементов</button>
+            </ul>
+
+
+
+
         </div>
 
     );

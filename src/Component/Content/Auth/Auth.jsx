@@ -47,22 +47,22 @@ const Auth = (props) => {
 
             >
                 {({touched, errors}) => (
-                    <Form>
+                    <Form className={`form-group auth-wrapper card`}>
                     {
                         errors.login &&
                         touched.login && <div className="field-error">{errors.login}</div>
                     }
-                    <label htmlFor="login"> Login:
-                        <Field type="login" name={`login`} placeholder={`You login`} />
+                    <label htmlFor="login" > Login:
+                        <Field type="login" name={`login`} placeholder={`You login`} className={`form-control`}/>
                     </label>
                     {
                         errors.password &&
                         touched.password && <div className="field-error">{errors.password}</div>
                     }
                     <label htmlFor="password"> Password:
-                        <Field type="password" name={`password`} placeholder={`You password`}/>
+                        <Field type="password" name={`password`} placeholder={`You password`} className={`form-control`}/>
                     </label>
-                    <button type={`submit`}>Show Page</button>
+                    <button type={`submit`} className={`btn btn-primary`}>Show Page</button>
 
                 </Form>
                 )}
@@ -70,10 +70,12 @@ const Auth = (props) => {
 
 
             {/*Карточка пользователя*/}
-            {!login ? <div></div> : <div className="card__user">
-                <div className={`user-card__avatar`}>{<img src={props.avatar} alt="avatar"/> || null}</div>
-                <div className={`user-card__name`}>{login}</div>
-                <button onClick={confirm} >login</button>
+            {!login ? <div></div> : <div className="card__user card">
+                <div className={`user-card__avatar`}>
+                    <h5 className={`card-title`}> Это вы? </h5>
+                    {<img src={props.avatar} className={`card-img-top`} alt="avatar"/> || null}</div>
+                <h2 className={`user-card__name`}>{login}</h2>
+                <button onClick={confirm} className={`btn btn-primary`}>login</button>
                 </div>}
 
         </section>

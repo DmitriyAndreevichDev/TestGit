@@ -19,24 +19,26 @@ const TerminalForm = (props) => {
             }}
 
         >
-            {({touched, errors}) => (<Form>
+            {({touched, errors}) => (
+                <Form className={`terminal__form`}>
                 {
                     errors.nameTerminal &&
                     touched.nameTerminal && <div className="field-error">{errors.nameTerminal}</div>
                 }
-                <label htmlFor="text"> Название терминала
-                    <Field type="text" name={`nameTerminal`}/>
+                <label htmlFor="text" className={`mt-4`}> Название терминала
                 </label>
-                {
+                    <Field type="text" name={`nameTerminal`}/>
+                    {
                     errors.description &&
                     touched.description && <div className="field-error">{errors.description}</div>
                 }
-                <label htmlFor="text"> Описание
-                    <Field type="text" name={`description`}/>
+                <label htmlFor="text" className={`mt-4`}> Описание
                 </label>
+                    <Field type="text" name={`description`}/>
 
                 <button
                     type={"submit"}
+                    className={`btn btn-primary mt-3`}
                 >
                     Добавить
                 </button>

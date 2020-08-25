@@ -1,7 +1,7 @@
 let initialState = {
     buyersArr: [
-        {id: 1, name: `Дитрий`, averageCheck: 2000, totalItem: 3, total: 6000},
-        {id: 2, name: `Дитрий`, averageCheck: 22000, totalItem: 31, total: 62000},
+        {id: 1, name: `Дмитрий`, averageCheck: 2000, totalItem: 3, total: 6000},
+        {id: 2, name: `Дмитрий`, averageCheck: 22000, totalItem: 31, total: 62000},
         {id: 3, name: `Анастасия`, averageCheck: 1000, totalItem: 6, total: 4000},
         {id: 4, name: `Иван`, averageCheck: 4000, totalItem: 2, total: 5000},
         {id: 5, name: `Олег`, averageCheck: 5000, totalItem: 3, total: 6000},

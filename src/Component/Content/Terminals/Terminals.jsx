@@ -12,7 +12,7 @@ const Terminals = (props) => {
         <section className={`terminals__wrapper`}>
             <h3>Terminals</h3>
             <TerminalForm/>
-            <div className={`terminals__items-wrapper`}>
+            <div className={`terminals__items-wrapper pt-5`}>
                 <div>
                     <table className={`table`}>
                         <thead>

@@ -1,5 +1,5 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import {connect} from "react-redux";
 import avatar__png from '../../Common/img/Avatar.png'
 
@@ -7,7 +7,7 @@ const SideBar = (props) => {
     return (
         <nav className={`nav`}>
             <div className={`nav__avatar`} >
-                {<img src={props.avatar || avatar__png} alt="avatar"/>}
+                <Link to={`/`}>{<img src={props.avatar || avatar__png} alt="avatar"/>}</Link>
             </div>
             <ul>
                 <li>
