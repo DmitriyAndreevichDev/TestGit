@@ -3,8 +3,7 @@ const REMOVE_TERMINAL = 'terminalReducer/REMOVE_TERMINAL';
 
 let initialState = {
     terminalItems: [
-        { id: 1, data: {name: `hello`, description: "fish" } },
-        { id: 2, data: {name: `sssss`, description: "fi3erewsh"} },
+        { id: 1, data: {name: `Terminal`, description: "Example" } },
 
     ]
 };

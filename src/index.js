@@ -7,6 +7,7 @@ import {BrowserRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 import store from "./Redux/Redux-store";
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css';
 
 ReactDOM.render(
   <React.StrictMode>

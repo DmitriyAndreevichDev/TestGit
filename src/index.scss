@@ -33,14 +33,17 @@ code {
   max-width: 1040px;
   width: 100%;
 }
+
 header {
-    display: flex;
+  display: flex;
 
 }
-.container__sidebar-content{
+
+.container__sidebar-content {
   display: flex;
   margin-top: 40px;
 }
+
 .nav {
   display: flex;
   flex-direction: column;
@@ -49,8 +52,10 @@ header {
   padding-right: 20px;
   min-height: 80vh;
   align-content: space-between;
-  .nav__avatar{
-    img{
+  justify-content: space-around;
+
+  .nav__avatar {
+    img {
       max-width: 150px;
       border-radius: 50%;
     }
@@ -61,3 +66,22 @@ header {
   display: flex;
   margin-left: 40px;
 }
+
+.field-error {
+  color: red
+}
+
+
+.content__not-found {
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    text-align: center;
+  }
+
+  span {
+    text-align: center;
+  }
+}
+
